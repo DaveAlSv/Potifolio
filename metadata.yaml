@@ -1,0 +1,7 @@
+name: Seu nome
+email: seu_user_email@provedor.dominio
+telefone: (xx) xxxxx-xxxx
+
+# set as null if don`t want show the gitlab or github user
+github_username: github_user or null
+gitlab_username: gitlab user or null

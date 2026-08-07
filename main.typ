@@ -5,6 +5,12 @@
 #show math.equation: set text(weight: "regular")
 #show heading: set block(above: 1.4em, below: 1em)
 
+#let user_metadata = yaml("metadata.yaml")
+#let github_link = "https://github.com/" + user_metadata.github_username
+#let gitlab_link = "https://gitlab.com/" + user_metadata.gitlab_username
+#let github_user = "@" + user_metadata.github_username
+#let gitlab_user = "@" + user_metadata.gitlab_username
+
 #set document(
   title: [Programador],
 )
@@ -15,12 +21,20 @@
 
 #v(2em)
 
-Nome : Dave Alves Silvino \
+Nome : #user_metadata.name\
 Contato:
 #pad(x: 1em, [
-  - email: `davealvessilvino+work@gmail.com`
-  - telefone: `(88) 99713-5145`
-  - github: #underline(offset: 0.2em)[#link("https://github.com/DaveAlSv")[`@DaveAlSv`]]
+  - Email:  #user_metadata.email
+  - Telefone: #user_metadata.telefone
+  
+  #{
+    if (user_metadata.github_username != none){
+      [- Github: #underline(offset: 0.2em)[#link(github_link)[#github_user]]]
+    }
+    if (user_metadata.gitlab_username != none){
+      [- GitLab: #underline(offset: 0.2em)[#link(gitlab_link)[#gitlab_user]]]
+    }
+  }
 ])
 
 #v(0.5em)
