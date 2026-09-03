@@ -2,6 +2,26 @@ name: Seu nome
 email: seu_user_email@provedor.dominio
 telefone: (xx) xxxxx-xxxx
 
-# set as null if don`t want show the gitlab or github user
-github_username: github_user or null
-gitlab_username: gitlab user or null
+# set as null if don`t want show the site users
+github_username: github-user or null
+gitlab_username: gitlab-user or null
+credly_username: credly-user or null
+linkedIn_username: linkedIn-user or null
+
+# layout
+head_line: Use esse campo para mostar a sua filosofia de trabalho !!!
+
+# Education
+degrees:
+  graduation : mostre o seu titulo academico !
+  
+experience:
+  company_0:
+    name: Nome Da Empresa
+    head_title: o seu cargo
+    head_line: 'descriçãoo breve da empresa e do seu papel nela' 
+    descrition:
+      - 'um bullet point'
+      - 'uma sequencia de :'
+      - o que voce fez, como foi metrificado e qual foi o impacto. e.g.
+      - fiz a transição de um sistema legado, otmizando 10x a velocidade nas requisões, assim melhorando o desempenho da equipe
